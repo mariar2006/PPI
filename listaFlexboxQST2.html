@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Reconstruído</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 300px;
+            height: 500px;
+            border: 2px solid purple;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .logo {
+            width: 100px;
+            height: 50px;
+            background-color: rgba(78, 40, 165, 0.76);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-block {
+            width: 100%;
+            height: 55px;
+            background-color: rgb(168, 151, 187);
+            margin: 10px 0;
+        }
+
+        .circle {
+            width: 65px;
+            height: 65px;
+            background-color: rgb(101, 139, 170);
+            border-radius: 50%;
+        }
+
+        .button {
+            width: 100px;
+            height: 30px;
+            background-color: rgba(78, 40, 165, 0.76);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">Company Logo</div>
+        <div class="text-block"></div>
+        <div class="text-block"></div>
+        <div class="text-block"></div>
+        <div class="text-block"></div>
+        <div class="circle"></div>
+        <div class="button">Button</div>
+    </div>
+
+</body>
+</html>
+
