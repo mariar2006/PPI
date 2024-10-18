@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model e Posicionamento</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 10px; /* Padding */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: white;
+            position: absolute;
+        }
+
+        .top-left {
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+
+        .top-right {
+            background-color: purple;
+            top: 0;
+            right: 0;
+        }
+
+        .bottom-left {
+            background-color: green;
+            bottom: 0;
+            left: 0;
+        }
+
+        .bottom-right {
+            background-color: yellow;
+            bottom: 0;
+            right: 0;
+            color: black; /* Letra preta para contraste */
+        }
+
+        .center {
+            background-color: gray;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="box top-left">Esquerda em Cima</div>
+    <div class="box top-right">Direita em Cima</div>
+    <div class="box bottom-left">Esquerda em Baixo</div>
+    <div class="box bottom-right">Direita em Baixo</div>
+    <div class="box center">Centro</div>
+</body>
+</html>

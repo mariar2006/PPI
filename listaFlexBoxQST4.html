@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flexbox com Hover e Imagem Completa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: relative;
+            justify-content: center;
+        }
+
+        .card {
+            position: relative;
+            width: 230px;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            background-color: #ddd;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1; 
+        }
+
+        .card.large {
+            width: 230px;
+        }
+
+        .card img {
+            width: 230px;
+            height: 185px;
+            object-fit: cover; 
+            transition: transform 0.3s ease-in-out;
+        }
+
+
+        .container .card:hover {
+            transform: scale(2.0); 
+            z-index: 10; 
+        }
+
+        .container .card:not(:hover) {
+            transform: scale(0.9);
+            z-index: 1;
+        }
+
+      
+        .card:hover img {
+            object-fit: contain; 
+        }
+
+        .card-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-footer p {
+            margin: 0;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 80%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://cdn.icon-icons.com/icons2/3609/PNG/512/forecast_weather_summer_cloud_sun_cloudy_icon_226609.png" alt="Imagem 1">
+            <div class="card-footer">
+            <p>🌥️<p>
+            </div>
+        </div>
+
+        <div class="card large">
+            <img src="https://cdn.icon-icons.com/icons2/3609/PNG/512/climate_forecast_weather_cloud_rainy_rain_icon_226618.png " alt="Imagem 2">
+            <div class="card-footer">
+                <p>Garoa ☔</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.icon-icons.com/icons2/3609/PNG/512/climate_forecast_weather_hot_summer_sun_shine_sunny_icon_226608.png" alt="Imagem 3">
+            <div class="card-footer">
+            <p>☀️<p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.icon-icons.com/icons2/3609/PNG/512/climate_forecast_weather_winter_cold_snowflake_snow_icon_226631.png " alt="Imagem 4">
+            <div class="card-footer">
+            <p>❄<p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.icon-icons.com/icons2/3609/PNG/512/climate_forecast_weather_rain_thunderstorm_thunder_cloud_icon_226644.png" alt="Imagem 5">
+            <div class="card-footer">
+            <p>⛈️<p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
