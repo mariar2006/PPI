@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letras</title>
+    <style>
+      
+
+    .container{
+        display: grid;
+        min-height: 100vh;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "A A A A A . . . B"
+        "A A A A A . . . B"
+        "A A A A A . . . B"
+        "C C C D D D D D D"
+        "C C C D D D D D D"
+        "C C C D D D D D D"
+        "C C C D D D D D D"
+        "C C C D D D D D D"
+        ;
+    }
+
+    .box{
+        background-color: rgb(124, 9, 201);
+        padding: 10px;
+        font-size: 3rem;
+        text-align: left;
+        border-radius: 10px;}
+
+    #box1{grid-area: A;  
+    }
+    #box2{grid-area: branco;
+    }
+    #box3{grid-area: B;
+    }
+    #box4{grid-area: C;
+    }
+    #box5{  
+        grid-area: D;
+        background-color: rgb(124, 9, 201);
+        padding: 10px;
+        border-radius: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+   
+    }
+
+
+    #box6{
+    background-color: rgb(117, 184, 189);
+    padding: 10px;
+    border-radius: 10px;
+    }
+    #box7{
+    background-color: rgb(117, 184, 189);
+    padding: 10px;
+    border-radius: 10px;
+    }
+    #box8{
+    background-color: rgb(117, 184, 189);
+    padding: 10px;
+    border-radius: 10px;
+    }
+    #box9{
+    background-color: rgb(117, 184, 189);
+    padding: 10px;
+    border-radius: 10px;
+    }
+    #box10{
+    background-color: rgb(117, 184, 189);
+    padding: 10px;
+    border-radius: 10px;
+    }
+    #box11{
+    background-color: rgb(117, 184, 189);
+    padding: 10px;
+    border-radius: 10px;
+    }
+    
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box3">B</div>
+        <div class="box" id="box4">C</div>
+        <div class="box" id="box5">
+                <div class="box" id="box6">E</div>
+                <div class="box" id="box7">F</div>
+                <div class="box" id="box8">G</div>
+                <div class="box" id="box9">M</div>
+                <div class="box" id="box10">I</div>
+                <div class="box" id="box11">J</div>
+        </div>
+    </div>
+    
+</body>
+</html>
