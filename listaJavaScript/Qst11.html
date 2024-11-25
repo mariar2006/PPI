@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qst11</title>
+</head>
+<body>
+    <script>
+        let string = prompt("Digite uma palavra: ");
+
+        const inverter = string.split('').reverse().join(''); 
+
+        if(string === inverter) {
+            console.log(`A palavra ${string} é um palíndromo.`);
+        } else {
+            console.log(`A palavra ${string} não é um palíndromo.`);
+        }
+
+    </script>
+</body>
+</html>

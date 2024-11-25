@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qst15</title>
+    <style>
+        #position{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        #botao{
+            min-height: 100px;
+            min-width: 100px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="position">
+        <label for="" id="lmin">Mínimo</label>
+        <input type="text" id="min">
+        <label for="" id="lmax">Máximo</label>
+        <input type="text" id="max">
+        <button id="botao">Gerar Número Aleatório</button>
+        <label for="" id="numAleatorio">-</label>
+    </div>
+    <script>
+        let botao = document.getElementById("botao");
+        let lblresultado = document.getElementById("numAleatorio");
+
+        botao.addEventListener("click",clickar);
+        function clickar(){
+            let min = Number.parseFloat(document.getElementById("min").value);
+            let max = Number.parseFloat(document.getElementById("max").value);
+            let numAle = Math.random();
+            let resultado = Math.round(Math.random()*(max-min)+min);
+            lblresultado.innerText = resultado;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qst13</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button id="bt" onclick="copia2()">Copiar</button>
+    <div id="paragrafos"></div>
+
+    <script>
+        let txt = document.querySelector("#txt");
+        let paragrafos = document.querySelector("#paragrafos");
+
+        function copia(){
+            paragrafos.innerHTML += txt.value+"<br>";
+            txt.value = "";
+        }
+        function copia2(){
+            let meup = document.createElement("p");
+            meup.innerHTML= txt.value;
+            paragrafos.appendChild(meup);
+            txt.value = "";
+        }
+    </script>
+</body>
+</html>
