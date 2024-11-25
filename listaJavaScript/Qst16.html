@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qst16</title>
+    <style>
+        *{margin: 0px;}
+        #div{
+            display: flex;
+            min-height: 100vh;
+            min-width: 100vw;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <button id="botao" onclick="clickar()">Altere a cor</button>
+    </div>
+
+    <script>
+        let botao = document.getElementById("botao");
+        let div = document.getElementById("div");
+
+        function clickar(){
+            let vermelho = parseInt((Math.random()*255));
+            let azul = parseInt((Math.random()*255));
+            let verde = parseInt((Math.random()*255));
+            div.style.backgroundColor = "rgb("+vermelho+", "+verde+", "+azul+")";
+        }
+    </script>
+</body>
+</html>
