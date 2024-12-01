@@ -7,9 +7,16 @@
 </head>
 <body>
 
-   // Quais são as tags usadas para definição de código PHP?
-//<?php 
-//?>
+   # Quais são as tags usadas para definição de código PHP?
+    R: <?php 
+        ?>
+        EXEMPLO: 
+        <?php
+        function hello(){
+        $hello="Olá Mundo";
+    }
+    ?>
+#
 
 
 
