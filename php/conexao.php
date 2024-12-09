@@ -3,8 +3,8 @@
 
 function connecta_bd(): void{
     $user = "root";
-    $pass = "aluno";
-    $database = "crud";
+    $pass = "";
+    $database = "ppibd";
     $host = "localhost";
 
     $userpwd = "";
@@ -22,7 +22,7 @@ function check_conn($conn_id): void{
 
     } else {
         echo "Erro ao conectar com o banco de dados!"
-    }
+    };
 }
 
 var_dump(value: connecta_bd);
