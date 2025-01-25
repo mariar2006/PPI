@@ -1,13 +1,11 @@
-CREATE DATABASE crud;
+DROP DATABASE crud;
 
+CREATE DATABASE IF NOT EXISTS crud character set utf8 collate utf8_general_ci;
 USE crud;
 
-CREATE TABLE carros (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    modelo VARCHAR(100),
-    marca VARCHAR(100),
-    ano INT,
-    cor VARCHAR(50),
-    placa VARCHAR(20)
-);
-
+CREATE TABLE usuarios(
+    id INT (11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR (100) NOT NULL,
+    senha VARCHAR (32) NOT NULL
+)
