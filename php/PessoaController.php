@@ -1,43 +1,29 @@
 <?php
-require_once 'PessoaDAO.php';
+include_once("Database.php");
+include_once("Pessoa_da.php");
 
-class PessoaController {
-    private $pessoaDAO;
-
-    public function __construct() {
-        $this->pessoaDAO = new PessoaDAO();
-    }
-
-    public function listarPessoas() {
-        return $this->pessoaDAO->getAll();
-    }
-
-    public function editarPessoa($id = null) {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $nome = $_POST['nome'];
-            $email = $_POST['email'];
-            $telefone = $_POST['telefone'];
-
-            if ($id) {
-                $this->pessoaDAO->atualizar($id, $nome, $email, $telefone);
-            } else {
-                $this->pessoaDAO->cadastrar($nome, $email, $telefone);
-            }
-
-            header("Location: index.php");
-            exit;
+if (isset($_POST["acao"])) {
+    if ($_POST["acao"] == "cadastrar") {
+        // cadastrar uma pessoa
+        if (isset($_POST["nome"]) && isset($_POST["email"])) {
+            $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            insere_usuario($nome, $email);
+            header("Location: listar.php");
+            exit();
         }
-
-        if ($id) {
-            return $this->pessoaDAO->getById($id);
+    } elseif ($_POST["acao"] == "editar") {
+        // editar uma pessoa
+        if (isset($_POST["id"]) && isset($_POST["nome"]) && isset($_POST["email"])) {
+            $id = $_POST["id"];
+            $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            editar_usuario($id, $nome, $email); 
+            header("Location: listar.php");
+            exit();
         }
-
-        return null;
     }
-
-    public function excluirPessoa($id) {
-        $this->pessoaDAO->excluir($id);
-        header("Location: index.php");
-        exit;
-    }
+} else {
+    echo "Erro: Ação não especificada.";
 }
+?>
